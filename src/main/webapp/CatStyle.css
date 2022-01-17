@@ -1,0 +1,176 @@
+@charset "ISO-8859-1";
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+	position: absolute;
+	top: 70px;
+	left: 50px;
+}
+
+body {
+	background: rgb(2, 0, 36);
+	color: white;
+}
+
+.column {
+	float: left;
+	width: 25%;
+	padding: 120px 20px 30px;
+}
+
+.row {
+	margin: 20px -5px;
+}
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+img {
+	width: 50%;
+}
+
+.home {
+    color: white;
+    text-decoration: none;
+    position: fixed;
+    left: 45px;
+    top: 5px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+.home-btn {
+    color: white;
+    position: fixed;
+    left: 20px;
+    top: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.home-btn:hover {
+    color: #3498db;
+}
+
+.home {
+	
+	color: white;
+    text-decoration: none;
+    position: absolute;
+    left: 45px;
+    top: 5px;
+    font-size: 24px;
+    cursor: pointer; 
+}
+
+
+.card {
+	box-shadow: 0 4px 8px 0 rgba(255, 192, 0, 0.2);
+	max-width: 300px;
+	text-align: center;
+	font-family: arial;
+	border-radius: 20px;
+	background-color: black;
+	color: white;
+}
+
+.price {
+	color: grey;
+	font-size: 22px;
+}
+
+.container {
+	display: block;
+	position: relative;
+	padding-left: 12px;
+	cursor: pointer;
+	font-size: 18px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+.container input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+
+.checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 25px;
+	width: 25px;
+	background-color: #eee;
+}
+
+.container:hover input ~ .checkmark {
+	background-color: #ccc;
+}
+
+.container input:checked ~ .checkmark {
+	background-color: #2196F3;
+}
+
+.checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+	display: block;
+}
+
+.container .checkmark::after {
+	left: 9px;
+	top: 5px;
+	width: 5px;
+	height: 10px;
+	border: solid white;
+	border-width: 0 3px 3px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+@media screen and (max-width: 600px) {
+	.column {
+		width: 100%;
+		display: block;
+		margin-bottom: 5px;
+	}
+}
+
+button.addcart {
+	position: absolute;
+	left: 37%;
+	bottom: -100%;
+	border: none;
+	outline: 0;
+	padding: 12px;
+	color: rgb(255, 192, 0);
+	background-color: white;
+	text-align: center;
+	cursor: pointer;
+	width: 25%;
+	font-size: 18px;
+}
+
+button.addcart:hover {
+	color: white;
+	background-color: rgb(255, 192, 0);
+}
